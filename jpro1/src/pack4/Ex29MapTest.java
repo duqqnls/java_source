@@ -20,7 +20,6 @@ public class Ex29MapTest {
 		System.out.println(list.containsValue("han"));
 		
 		System.out.println();
-		
 		Set set = list.keySet();
 		Iterator iter = set.iterator();
 		while(iter.hasNext()) {

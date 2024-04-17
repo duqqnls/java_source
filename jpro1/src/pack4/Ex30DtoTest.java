@@ -38,7 +38,6 @@ public class Ex30DtoTest {
 			dto.setIrum("토마토");
 			dto.setJumsu(80);
 			list.add(dto); // 세 번째 학생 자료 list에 등록 
-		
 		}
 		
 		public void showList() { // list 컬렉션에 저장된 학생 자료를 출력 

@@ -11,5 +11,4 @@ import lombok.NoArgsConstructor;
 public class Ex32HaksaengDto {
 	private String name;
 	private int kor, eng, mat;
-	
 }

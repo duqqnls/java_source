@@ -10,7 +10,6 @@ public class Ex30StudentDto {
 	public Ex30StudentDto() {
 		//
 	}
-	
 	public Ex30StudentDto(String hakbun, String irum, int jumsu) {
 		this.hakbun = hakbun;
 		this.irum = irum;

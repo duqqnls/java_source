@@ -34,7 +34,6 @@ public class Ex31DtoTest {
 			}
 		}
 	}
-	
 	public void showList() {
 		for (Ex31DtoStudent my:list) {
 			int tot = my.getKor() + my.getEng();

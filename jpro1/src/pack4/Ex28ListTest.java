@@ -20,7 +20,6 @@ public class Ex28ListTest {
 		for(Object obj:list) {
 			System.out.println(obj);
 		}
-		
 		System.out.println();
 		// Iterator (반복자) : 개발자가 컨테이너, 특히 리스트를 순회할 수 있게 해주는 객체다.
 		Iterator iter = list.iterator();

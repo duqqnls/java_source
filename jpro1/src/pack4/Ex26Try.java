@@ -19,7 +19,6 @@ public class Ex26Try {
 		}
 
 	}
-
 	public static void main(String[] args) {
 		try {
 			FileReader fr = new FileReader("c:/Song/aa.txt");

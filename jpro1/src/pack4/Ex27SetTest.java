@@ -13,7 +13,6 @@ public class Ex27SetTest {
 //		HashSet<Ex27SetTest> list = new HashSet<Ex27SetTest>();
 //		list.add(1);
 //		list.add(test);
-		
 		HashSet<String> list = new HashSet<String>();
 		list.add("song");
 		list.add("song");

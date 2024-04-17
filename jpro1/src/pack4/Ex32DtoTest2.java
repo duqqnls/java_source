@@ -42,7 +42,6 @@ public class Ex32DtoTest2 {
 		}
 		
 	}
-	
 	public static void main(String[] args) {
 		String[] datas = new String[3];
 		datas[0] = "김밥,100,100,100";
@@ -53,5 +52,4 @@ public class Ex32DtoTest2 {
 		test2.inputData(datas);
 		test2.displayData();
 	}
-
 }
