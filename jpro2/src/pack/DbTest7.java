@@ -1,29 +1,16 @@
 package pack;
 
-import java.awt.BorderLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
-import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-
-import java.sql.Connection;
+import java.sql.*;
+import javax.swing.*;
 
 public class DbTest7 extends JFrame implements ActionListener {
 	JTextField txtCode, txtName, txtAmount, txtUnit;
 	JButton btnAdd = new JButton("추가");
-	JLabel totalCode, totalName, totalAmount, totalUnit, totalMoney;
 	JTextArea txtResult = new JTextArea(55,35);
+	String sql = "";
 	
 	Connection conn;
 	PreparedStatement pstmt;
@@ -39,10 +26,9 @@ public class DbTest7 extends JFrame implements ActionListener {
 			String sql =""; 
 			
 			setTitle("상품 처리");
-			
 			layInit();
 			
-			setBounds(800,800,800,800);
+			setBounds(200, 200, 600, 300);
 			setVisible(true);
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -55,31 +41,22 @@ public class DbTest7 extends JFrame implements ActionListener {
 	public void layInit() {
 		// 1행
 		JPanel panel1 = new JPanel();
-		JLabel lbl1 = new JLabel("코드 : ");
-		txtCode = new JTextField("", 5);
-		JLabel lbl2 = new JLabel("품명 : ");
-		txtName = new JTextField("", 5);
-		JLabel lbl3 = new JLabel("수량 : ");
-		txtAmount = new JTextField("", 5);
-		JLabel lbl4 = new JLabel("단가 : ");
-		txtUnit = new JTextField("", 5);
-		JButton btnAdd = new JButton("추가");
-		btnAdd.addActionListener(this);
-	
-		panel1.add(lbl1);
+		panel1.add(new JLabel("코드 : "));
 		panel1.add(txtCode);
-		panel1.add(lbl2);
+		panel1.add(new JLabel("품명 : "));
 		panel1.add(txtName);
-		panel1.add(lbl3);
+		panel1.add(new JLabel("수량 : "));
 		panel1.add(txtAmount);
-		panel1.add(lbl4);
+		panel1.add(new JLabel("단가 : "));
 		panel1.add(txtUnit);
 		panel1.add(btnAdd);
-	    add(panel1, BorderLayout.NORTH);
-	    
-	    txtResult.setText("결과");
-	    JScrollPane scrollPane = new JScrollPane(txtResult);
-	    add(scrollPane, BorderLayout.CENTER);
+		btnAdd.addActionListener(this);
+	
+		txtResult.setEditable(false);
+		JScrollPane pane = new JScrollPane(txtResult);
+		add(pane);
+
+		btnAdd.addActionListener(this);
 	
 	}
 	
