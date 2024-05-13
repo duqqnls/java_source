@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table 태그 연습</title>
+</head>
+<body>
+<table border="1">
+	<thead>
+		<tr>
+			<th>제목1</th><th>제목2</th><th>제목3</th>
+		</tr>	
+	</thead>
+	<tbody>
+		<tr>
+			<th>내용1임을 알림</th><th>내용2</th><th>내용3</th>
+		</tr>
+		<tr>
+			<th>내용4</th><th>내용5</th><th>내용6</th>
+		</tr>
+	</tbody>
+</table>
+<br>
+<table border="2" bgcolor="yellow"
+		style="background-image: url('kitty.jpeg')"> <!-- 이미지삽입 1 : ㅈㄴ신기 -->
+	<caption>상품자료</caption>
+	<tr bgcolor="red">
+		<td bgcolor="silver"><b>상품명</b></td>
+		<td>수량</td>
+		<td>단가</td>
+	</tr>
+	<tr>
+		<td>컴퓨터</td>
+		<td align="center">2</td>
+		<td>
+			<img src="kitty.jpeg" width="100" height="100"> <!-- 이미지삽입 2 : 자원으로 넣는 방식 -->
+		</td>
+	</tr>
+	<tr>
+		<td>a</td>
+		<td>
+			<table border="3">
+			<tr>
+				<td>
+					<a href="https://www.naver.com">naver</a>
+				</td>
+				<td>나</td>
+			</tr>
+			</table>
+		</td>
+		<td>c</td>
+	</tr>	
+</table>
+<br> <!--  행 병합 row span, 열 병합 col span -->
+<table border="10" width="50%">
+	<tr>
+		<td colspan="2">a</td> <!-- colspan : 여러 열을 합침 -->
+		<td>b</td> 
+		<td rowspan="2">c</td> <!-- rowspan : 여러 행을 합침 -->
+	</tr>
+	<tr>
+		<td>d</td>
+		<td>e</td>
+		<td>f</td>
+	</tr>	
+</table>
+<table border="10" width="50%">
+	<tr align="center">
+		<td rowspan="2">1</td>
+		<td colspan="2">2</td>
+		<td rowspan="2">3</td>
+	</tr>
+	<tr align="center">
+		<td colspan="2">4</td>
+	</tr>
+	<tr align="center">
+		<td rowspan="1">5</td>
+		<td rowspan="1">6</td>
+		<td rowspan="1">7</td>
+		<td rowspan="2">8</td>
+		
+	</tr>
+		<tr align="center">
+		<td colspan="1">9</td>
+		<td colspan="2">10</td>
+	</tr>
+</table>
+<br><br>
+한 화면에서 여러 개의 html문서를 보고자 할 경우 iframe 사용
+<iframe src="test1.html" name="star" width="99%" height="300"></iframe>
+<br/>
+<a href="test2.html" target="star">test2보기 (iframe에서)</a>
+<p/>
+이미지 맵 : 이미지를 여러 영역으로 지정해 각 영역마다 link를 걸 수 있다.
+<br>
+<img src="kitty.jpeg" width="150" usemap="#kitty"> <!-- <map>태그의 name속성과 <img>태그의 <usemap>속성의 이름을 일치시켜야 한다. -->
+<map name="kitty">
+	<area shape ="rect" coords="0,0,50,50" href="https://www.naver.com">
+	<area shape ="rect" coords="50,100,100,200" href="https://www.daum.net">
+</map>
+</body>
+</html>

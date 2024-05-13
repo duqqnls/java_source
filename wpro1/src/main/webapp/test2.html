@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지와 링크</title>
+</head>
+<body>
+이미지 출력<br>
+<img title="그림" src="kitty.jpeg" width="200" height="200" title="그림"> 
+<br>
+<img src="https://pds.joongang.co.kr//news/component/htmlphoto_mmdata/201806/24/1fedae5b-67a2-40a8-9ec2-7c660edc78f4.jpg" width="200" height="200" title="그림">
+<hr>
+a 태그 : 하이퍼 링크 가능<br>
+<a href="test1.html">test1 문서</a>보기<br>
+<a href="http://localhost:8080/wpro1/test1.html">test1문서</a>보기<br>
+<a href="test1.html" target = "_self">test1 문서(_self)</a>보기<br>
+<a href="test1.html" target = "_new">test1 문서(_new)</a>보기<br>
+<a href="test1.html" target = "_blank">test1 문서(_blank)</a>보기<br>
+<a href="https://www.naver.com">네이버</a><br>
+<a href="https://www.naver.com" target = "_naver">네이버 출발(_new)</a><br>
+<a href="test1.html">
+	<img title="연습" src="kitty.jpeg" width="200" height="200">
+</a><br>
+<a href="files/book1.xlsx">엑셀문서</a><br> <!-- 파일이 있으면 클릭했을때 파일 다운로드되버림 / 즉 해석할 수 없으면 다운로드로 넘겨버림 -->
+<a href="files/code.txt">텍스트문서</a><br> <!-- 파일이 있으면 화면에 보여줌 / 즉 해석가능해서 화면에 텍스트파일 띄움 -->
+<a href="mailto:duqqnls123@naver.com">엽짱한테 메일 전송</a>
+<hr>
+<a href="META-INF/aaa.html">META-INF 폴더 내 파일</a><br> <!-- META는 웹에서 막아두었다. / 보안 설정 때문 / 그래서 중요한 파일을 넣어두는 것이다. -->
+<a href="WEB-INF/bbb.html">WEB-INF 폴더 내 파일</a><br> <!-- WEB는 웹에서 막아두었다. / 내부에서 호출 불가능 -->
+<a href="kbs/a.html">kbs 폴더 내 a 파일</a><br>
+<a href="/kbs/a.html">/가 붙은 kbs 폴더 내 a 파일</a><br>
+<a href="kbs/sbs/b.html">kbs 폴더 내 sbs 폴더 내에 b 파일</a><br>
+<a href="kbs/sbs/tvn/c.html">kbs 폴더 내 sbs 폴더 내 tvn 폴더 내에 c 파일</a><br>
+<br>
+<a href="../b.html">sbs</a><br>
+<a href="../../a.html">kbs</a><br>
+<a href="/wpro1/kbs/a.html">kbs</a><br>
+<a href="/wpro1/mbc/d.html">mbc</a><br>
+<hr>
+</body>
+</html>
