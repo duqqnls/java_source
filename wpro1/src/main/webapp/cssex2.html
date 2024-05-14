@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Layout</title>
+
+<!-- CSS 적용 -->
+<style type="text/css">
+body { 
+	width : 90%;  /* 전체 페이지 너비를 화면 너비의 90% */ 
+	margin : 0 auto;  /* */ 
+}
+
+h2#title {
+	text-align : center;
+	border-bottom : 2px solid black;
+	padding-bottom: 10px;
+}
+
+li.go_site {
+	float : left;
+	width : 60px;
+	margin-left : 5px;
+}
+
+ul {
+	list-style: none; /* 목록 스타일 제거 */ 
+	padding : 0px; /* 안쪽 여백 제거 */ 
+	margin : 0px; /* 바깥 여백 제거 */  
+	
+}
+
+li a {
+	display : block;  /* 링크를 블록 요소로 설정하여 */ 
+}
+
+/*
+overflow : 프로퍼티는 요소내의 컨텐츠가 너무 커서 요소 내에 모두 보여주기 힘들 때 그것을
+어떻게 보여줄지를 지정
+auto : 컨텐츠 양에 따라 스크롤바를 추가할지 자동으로 결정
+*/
+
+.head {
+	border-width: 1px;
+	width: 90%;
+	overflow : auto;
+
+}
+nav {
+	float : left; /* 왼쪽으로 정렬하여 플로팅 */ 
+	width: 120px; /* 너비를 20%로 설정 */
+}
+
+#contents {
+	float : left;  /* 왼쪽으로 정렬하여 플로팅 */ 
+	width : 55px;	/* 너비를 20%로 설정 */
+}
+
+#ad { 
+	float : left;  /*  왼쪽으로 정렬하여 플로팅 */ 
+	width: 200px;  /* 너비를 */ 
+	font-size : 0.8em;
+}
+
+footer {
+	margin-top : 250px;
+	clear : both; /* Float을 해지 */	
+
+}
+
+
+</style>
+</head>
+<body>
+<h2 id="title"> * CSS로 화면 레이아웃 연습 *</h2>
+<header>
+	<h3>*** 머리글 ***</h3>
+	<ul class="head">
+		<li class ="go_site"><a href="https://www.naver.com">네이버</a></li>
+		<li class ="go_site"><a href="https://www.korea.com">코리아</a></li>
+		<li class ="go_site"><a href="https://www.google.com">구글</a></li>
+	</ul>
+</header>
+
+<nav>
+	<h3>항목 선택</h3>
+	<ul>
+		<li>메인</li>
+		<li>자동차</li>
+		<li>반도체</li>
+		<li>스포츠</li>
+		<li>기타</li>
+	</ul>
+</nav>
+
+<div id="contents">
+	<h3>핫 이슈</h3>
+	<span>
+대한민국 최대 규모의 온라인 편집숍이자, 대한민국의 10번째 유니콘 기업이다.
+
+의류 뿐만 아니라 가방, 액세서리 등 다양한 상품을 취급한다. 특히 20대 젊은 남성 고객이 많은 특징이 있다. 상품도 트렌디하거나 너드틱한 고등학생-20대 젊은 남성을 타겟으로 하는 비교적 저렴한 옷 신발 가방 액세서리 화장품 등을 많이 취급하고 있다. 반면 신사복 따위의 30대 직장 남성 타겟 고급 브랜드상품은 거의 없다. 이는 대부분의 한국 인터넷 패션 쇼핑몰들이 여성의류 판매에 치중하고있는 것과 차별성이 있다. '우신사'라는 여성 전용 쇼핑몰도 따로 존재한다. 현재는 잡화(전자기기 및 여타 생활용품) 등의 상품도 취급하고 있다.	
+	</span>
+</div>
+
+<div id="ad">
+	<h3>광고 글</h3>
+	<ul>
+		<li>무신사</li>
+		<li>크림</li>
+		<li>하이츠스토어</li>
+	</ul>
+</div>
+
+<footer>
+	<b>나는 바닥글</b>&nbsp;&nbsp; 공지 사항을 주로 기술
+</footer>
+
+
+
+
+</body>
+</html>
