@@ -2,74 +2,58 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Layout</title>
+<title>layout</title>
 
 <!-- CSS 적용 -->
 <style type="text/css">
-body { 
-	width : 90%;  /* 전체 페이지 너비를 화면 너비의 90% */ 
-	margin : 0 auto;  /* */ 
+body {
+	width: 800px;
+	margin: 0 auto;
 }
 
 h2#title {
-	text-align : center;
-	border-bottom : 2px solid black;
-	padding-bottom: 10px;
+	text-align: center;
 }
 
-li.go_site {
-	float : left;
-	width : 60px;
-	margin-left : 5px;
-}
-
-ul {
-	list-style: none; /* 목록 스타일 제거 */ 
-	padding : 0px; /* 안쪽 여백 제거 */ 
-	margin : 0px; /* 바깥 여백 제거 */  
+li.go_site { /* ul 바로 자식인 li의 class 이름이 go_site인 요소의 스타일 변경 */
+	float: left;
+	width: 60px;
+	margin-left: 5px;
 	
 }
 
-li a {
-	display : block;  /* 링크를 블록 요소로 설정하여 */ 
-}
-
-/*
-overflow : 프로퍼티는 요소내의 컨텐츠가 너무 커서 요소 내에 모두 보여주기 힘들 때 그것을
-어떻게 보여줄지를 지정
-auto : 컨텐츠 양에 따라 스크롤바를 추가할지 자동으로 결정
-*/
+ul {list-style: none; /* 리스트 앞에 점 표시가 빠짐 */}
+li a {display: block;}
 
 .head {
 	border-width: 1px;
 	width: 90%;
-	overflow : auto;
-
+	overflow: auto;
 }
+
 nav {
-	float : left; /* 왼쪽으로 정렬하여 플로팅 */ 
-	width: 120px; /* 너비를 20%로 설정 */
+	float: left;
+	width: 120px;
 }
 
 #contents {
-	float : left;  /* 왼쪽으로 정렬하여 플로팅 */ 
-	width : 55px;	/* 너비를 20%로 설정 */
+	float: left;
+	width: 400px;
 }
 
-#ad { 
-	float : left;  /*  왼쪽으로 정렬하여 플로팅 */ 
-	width: 200px;  /* 너비를 */ 
-	font-size : 0.8em;
+#ad {
+	float: left;
+	width: 200px;
+	font-size: 0.8em
 }
 
 footer {
-	margin-top : 250px;
-	clear : both; /* Float을 해지 */	
-
+	margin-top: 250px;
+	clear: both;
 }
-
-
 </style>
+
+<!-- HTML -->
 </head>
 <body>
 <h2 id="title"> * CSS로 화면 레이아웃 연습 *</h2>
@@ -114,9 +98,6 @@ footer {
 <footer>
 	<b>나는 바닥글</b>&nbsp;&nbsp; 공지 사항을 주로 기술
 </footer>
-
-
-
 
 </body>
 </html>
