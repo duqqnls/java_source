@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+// 문1) 두 수를 함수로 입력하여 +, -, *, / 한 결과를 함수 내에서 각각 출력하세요.
+function showOper(a,b){
+	let calc = [
+		a + b, 
+		a - b,
+		a * b,
+		a / b
+	]
+	
+	return calc;
+}
+document.write(showOper(8, 2));
+
+// 문2) 주어진 배열의 모든 요소의 합을 반환하는 함수를 작성하세요.
+function sumArray(arr){
+	let sum = 0;
+	for(let a = 0; a < arr.length; a++){
+		sum += arr[a];
+	}
+	return sum;
+	document.write('<br>');
+}
+console.log(sumArray([1, 2, 3, 4, 5]));   // 결과 : 15
+console.log(sumArray([10, 20, 30]));    // 결과 : 60
+
+// 문3) 주어진 숫자의 팩토리얼을 구하는 함수를 작성하세요. 팩토리얼은 1부터 주어진 숫자까지의 모든 숫자의 곱이다.
+function factorial(n){
+	let result = 1;
+	for(let i = 1; i <= n; i++){
+		result = result * i
+	}
+	return result;
+	document.write('<br>');	
+}
+document.write(factorial(5)); // 결과 : 120
+document.write(factorial(7)); // 결과 : 5040
+
+// 문4) 주어진 문자열에서 특정 문자의 개수를 세는 함수를 작성하세요.
+function countChar(str, char) {
+	let count = 0;
+	for (let i = 0; i < str.length; i++) {
+		if (str[i] === char) {
+			count ++;
+			}
+		}
+	return count;	
+}
+document.write(countChar("hello", "l"));        
+document.write(countChar("javascript", "a"));  // 결과 : 2
+
+// 문5) 주어진 문자열 myString에서 숫자를 추출하여 그 합을 반환하는 함수를 작성하세요. 
+function totShow(myString) {
+    let chars = myString.split("");
+    let total = 0;
+
+    for (let char of chars) {
+        if (!isNaN(char) && char !== ' ') {
+            total += +char;
+        }
+    }
+    return total;
+}
+const myString = "1a2b3c4d123";
+document.write(totShow(myString));
+
+</script>
+</head>
+<body>
+</body>
+</html>

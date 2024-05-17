@@ -87,5 +87,29 @@ for(let a=1;a<=9;a++){
 
 </script>
 
+<!-- 개인학습  -->
+  <script>
+    document.write('<table border="1">'); // 테이블 시작
+
+    for (let j = 2; j <= 9; j++) { // 각 행을 만듦
+      document.write('<tr>');
+      if (j % 2 === 0) { // 짝수 행은 노란색 배경
+        document.write('<td style="background-color: yellow;">');
+      } else { // 홀수 행은 파란색 배경
+        document.write('<td style="background-color: blue;">');
+      }
+      
+      // 각 셀에 구구단 곱셈 결과 출력
+      for (let k = 1; k <= 9; k++) {
+        document.write(`${j} * ${k} = ${j * k} &nbsp; &nbsp;`);
+      }
+
+      document.write('</td></tr>'); // 행을 닫음
+    }
+
+    document.write('</table>'); // 테이블 닫음
+  </script>
+
+
 </body>
 </html>
