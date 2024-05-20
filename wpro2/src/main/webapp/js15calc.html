@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>간단 계산기</title>
+<script type="text/javascript">
+window.onload = () => {
+		
+	const display = document.getElementById("display");
+	const result = document.getElementById("result");
+	
+	document.getElementById("btnAC").onclick=function() { 
+        display.value = "";
+        result.value = "";
+   	    console.log(btnAC);
+	}
+
+	 const buttons = document.querySelectorAll("span");
+	    buttons.forEach(button => {
+	        button.onclick = function() {
+	            const value = button.innerText;
+	            if (value === "=") {
+	                try {
+	                    result.value = eval(display.value);
+	                } catch (e) {
+	                    result.value = "Error";
+	                }
+	            } else {
+	                display.value += value;
+	            }
+	            if (value === "btnAC") {
+	            	display.textContent = ""; // display 초기화
+	            	result.textContent = "";  // result 초기화 
+	            	
+	            }
+	        }
+	    });
+	}
+</script>
+<style>
+
+table { 
+border-collapse: collapse;
+}
+
+td { 
+padding : 5px 10px;
+text-align : center;
+}
+
+input {
+outline : none;
+}
+
+input:focus {
+outline : none;
+}
+
+#display { 
+text-align : Right;
+}
+
+#result {
+text-align : Right;
+}  
+
+</style>
+</head>
+<body>
+
+<table border = "1">
+	<tr>
+		<td colspan = "4">
+		<input type = "text" id = "display" placeholder="display"></td>
+	</tr>
+	<tr>
+		<td colspan = "4"> 
+		<input type = "text" id = "result" placeholder = "result"></td>
+	</tr>
+	<tr>
+		<td colspan = "3"> 
+		<div id = "btnAC"> AC </div></td>
+		<td><span id = "btn/">/</span></td>
+	</tr>
+	<tr>
+		<td><span id = "btn7">7</span></td>
+		<td><span id = "btn8">8</span></td>
+		<td><span id = "btn9">9</span></td>
+		<td><span id = "btn*">*</span></td>
+	</tr>
+	<tr>
+		<td><span id = "btn4">4</span></td>
+		<td><span id = "btn5">5</span></td>
+		<td><span id = "btn6">6</span></td>
+		<td><span id = "btn-">-</span></td>
+	</tr>
+	<tr>
+		<td><span id = "btn1">1</span></td>
+		<td><span id = "btn2">2</span></td>
+		<td><span id = "btn3">3</span></td>
+		<td><span id = "btn+">+</span></td>
+	</tr>
+	<tr>
+		<td colspan = "2">
+		<span id = "btn0"> 0 </span></td>
+		<td><span id = "btn.">.</span></td>
+		<td><span id = "btn=">=</span></td>
+	</tr>
+
+</table>
+</body>
+</html>
