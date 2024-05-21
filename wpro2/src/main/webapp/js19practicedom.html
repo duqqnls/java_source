@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = () => {
+	document.getElementById("sel").onchange = function () {
+        // 먼저 테이블을 비웁니다.
+        clearTable();
+
+        // 선택한 단의 값을 가져옵니다.
+        const sel = document.getElementById("sel").value;
+        
+        // 걍 위로 뺄게 
+        const myTable = document.getElementById("myTable");
+        myTable.setAttribute("border", 1);
+        const myTbody = document.getElementById("myTbody");
+
+        if (sel === '2') {
+            for (let j = 1; j < 10; j++) {
+                let row = document.createElement("tr");
+                let cell = document.createElement("td");
+                cell.textContent = `2 x ${j} = ${2 * j}`;
+                row.appendChild(cell);
+               	myTbody.appendChild(row);
+            }
+        }
+
+        else if (sel === '3') {
+        	for (let j = 1; j < 10; j++) {
+                let row = document.createElement("tr");
+                let cell = document.createElement("td");
+                cell.textContent = `3 x ${j} = ${3 * j}`;
+                row.appendChild(cell);
+               	myTbody.appendChild(row);
+        	}
+        }
+        
+        else if (sel == '4') {
+	    	for (let j = 1; j < 10; j++) {
+	            let row = document.createElement("tr");
+	            let cell = document.createElement("td");
+	            cell.textContent = `4 x ${j} = ${4 * j}`;
+	            row.appendChild(cell);
+	           	myTbody.appendChild(row);
+	    	}
+        }
+        
+        else if (sel == '5') {
+	    	for (let j = 1; j < 10; j++) {
+	            let row = document.createElement("tr");
+	            let cell = document.createElement("td");
+	            cell.textContent = `5 x ${j} = ${5 * j}`;
+	            row.appendChild(cell);
+	           	myTbody.appendChild(row);
+	    	}
+        }
+        
+        else if (sel == '6') {
+	    	for (let j = 1; j < 10; j++) {
+	            let row = document.createElement("tr");
+	            let cell = document.createElement("td");
+	            cell.textContent = `6 x ${j} = ${6 * j}`;
+	            row.appendChild(cell);
+	           	myTbody.appendChild(row);
+	    	}
+        }
+        
+        else if (sel == '7') {
+	    	for (let j = 1; j < 10; j++) {
+	            let row = document.createElement("tr");
+	            let cell = document.createElement("td");
+	            cell.textContent = `7 x ${j} = ${7 * j}`;
+	            row.appendChild(cell);
+	           	myTbody.appendChild(row);
+	    	}
+        }
+        
+        else if (sel == '8') {
+	    	for (let j = 1; j < 10; j++) {
+	            let row = document.createElement("tr");
+	            let cell = document.createElement("td");
+	            cell.textContent = `8 x ${j} = ${8 * j}`;
+	            row.appendChild(cell);
+	           	myTbody.appendChild(row);
+	    	}
+        }
+        
+        else if (sel == '9') {
+	    	for (let j = 1; j < 10; j++) {
+	            let row = document.createElement("tr");
+	            let cell = document.createElement("td");
+	            cell.textContent = `9 x ${j} = ${9 * j}`;
+	            row.appendChild(cell);
+	           	myTbody.appendChild(row);
+	    	}
+        }
+    };
+
+    document.querySelector("button").onclick = function(event) {
+        event.preventDefault();
+        clearTable();
+    };
+
+    function clearTable() {
+        const myTbody = document.getElementById("myTbody");
+        while (myTbody.firstChild) {
+            myTbody.removeChild(myTbody.firstChild);
+        }
+    }
+};
+</script>
+</head>
+<body>
+<h2>** 구구단 출력 **</h2>
+<form action = "#" name = "frm">
+단 :
+<select name = "sel" id = "sel">
+	<option value = "">선택</option>
+	<option value = "2">2단</option>
+	<option value = "3">3단</option>
+	<option value = "4">4단</option>
+	<option value = "5">5단</option>
+	<option value = "6">6단</option>
+	<option value = "7">7단</option>
+	<option value = "8">8단</option>
+	<option value = "9">9단</option>
+</select>
+<button onclick="cleFunc()">삭제</button>
+</form>
+<br>
+<span id = "header"></span>
+<table id = "myTable">
+	<tbody id = "myTbody"></tbody>
+</table>
+</body>
+</html>
