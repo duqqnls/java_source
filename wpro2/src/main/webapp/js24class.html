@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>클래스 연습</title>
+</head>
+<body>
+<script type="text/javascript">
+/*
+클래스는 OOP에서 특정 객체를 생성하기 위해 멤버를 정의하는 일종의 틀(설계도)
+기존의 prototype을 기반으로 객체를 생성하는 것보다 좀 더 명료하게 객체 작성이 가능하다. 
+*/
+class Class1{
+	addr = '경기'; // 멤버 변수. prototype 속성. let, const x
+	name; // 생성자로 값을 받을 때는 생략이 가능 -> 가독성을 위해 적어도 됨 
+	constructor(name) {   // 생성자
+		this.name = name; // 각 인스턴스의 멤버변수로 만들어짐 
+	}
+	
+	sayHi() { // 멤버 메소드 
+	document.write("<br>", this.name);
+	document.write("<br>", this.addr);
+	let msg = "프로그래머"; // 지역 변수 
+	return "<br>이름은 " + this.name + " " + msg;
+	}
+}
+
+let c1 = new Class1('송여빈');
+document.write("<br>", c1, " ", typeof Class1, " ", typeof c1);
+document.write("<bR> 주소는 ", c1.addr);
+document.write(c1.sayHi());
+document.write("<br>");
+
+let c2 = new Class1("한국인");
+document.write(c2.sayHi());
+
+document.write("<hr>");
+class Class2{
+	subject = '자바스크립트'; // 접근지정자 x
+	
+	// constructor(){} // 오버로딩 x
+	constructor(name, nai) {
+		this.name = name;
+		this.nai = nai;
+	}
+	
+	printData() {
+		document.write(`<br>이름은 ${this.name}이고 나이는 ${this.nai}`);
+		document.write(`<br>수강과목은 ${this.subject}`);
+		// return undefined; // return을 적든 생략하던지 undefined를 반환
+	}
+	
+	// printData(){} // Overloading x
+	
+	//getter, setter 사용 이유 : private 멤버를 처리하기 위함이다.
+	get subjectMethod() { // 이름은 동적
+		return subject;
+	}
+	
+	get nameAndAddr() {
+		return `${this.name}의 나이는 ${this.nai}`;
+	}
+	
+	set setName(name) { //사실 setter는 많이 사용 되지는 않는다.
+		this.name = name; 
+	}
+}
+
+let test1 = new Class2('그릭요거트', 15);
+document.write(test1.printData());
+test1.printData();
+document.write("<br>", test1.subject);
+document.write("<br>", test1.name);
+document.write("<br>", test1.nai);
+
+test1.name = '낫또';
+document.write("<br><br>", test1.name);
+test1.printData();
+
+document.write("<br>", test1.getSubject); // getter 메소드의 이름만 적음 
+document.write("<br>", test1.nameAndAddr);
+test1.setName = '딸기'; // setter 메소드의 이름으로 치환 
+document.write("<br>", test1.nameAndAddr);
+
+let test2 = new Class2('바나나', 10);
+//...
+
+document.write("<hr>");
+class Class3 {
+	#name; // private 멤버 변수, 모던한 자바스크립트에서 지원 
+	age; // public 멤버변수  
+	static addr = '평택';
+	
+	constructor(name, age){
+		this.#name = name;
+		this.age = age;
+	}
+	
+	get getName() { // get name() {}
+		return this.#name;
+	}
+}
+const person = new Class3('코코씨', 13);
+document.write("<br>", person);
+document.write("<br>", person.name); // undefined
+document.write("<br>", person.age);
+// document.write("<br>", person.#name); // err 
+document.write("<br>", person.getName); // private를 외부에서 호출하려면 99-101라인처럼 get 사용하기 
+document.write("<br>", person.addr); // undefined
+document.write("<br>", Class3.addr); // static를 호출하려면, 클래스이름으로 불러주기 
+</script>
+</body>
+</html>
