@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = () => {
+	document.querySelector("#btnOk").onclick = sijak;
+}
+
+let xhr;
+
+function sijak(){
+	// alert("a");
+	xhr = new XMLHttpRequest(); 										// ** 1. XMLHttpRequest 객체 생성 
+	
+	xhr.open('get', 'js35.jsp', true);									// ** 2. 요청 설정 
+	
+
+	xhr.onreadystatechange = function(){ 								// ** 3. 요청 상태 변화에 대한 이벤트 핸들러 설정  
+		if(xhr.readyState === 4) { 										// ** 4. 요청의 상태가 4라면,
+			if(xhr.status === 200){										// ** 5. HTTP 응답 상태 코드도 200(성공)이라면, 
+				process();												// ** 6. process() 메서드를 실행한다. 
+			}
+		}
+	}	
+	
+	xhr.send();															// ** 7. 본문없이 요청 전송 
+}
+
+function process() {
+	let data = xhr.responseXML;											// ** 8. 변수 data는 서버로부터 받은 응답 데이터를 XML로 반환한다.
+	// alert(data);
+	let sangpumNode = data.getElementsByTagName("sangpum");
+	let codeNode = data.getElementsByTagName("code");
+	let sangirumNode = data.getElementsByTagName("sangirum");
+	let suNode= data.getElementsByTagName("su");
+	let dangaNode = data.getElementsByTagName("danga");
+	
+	let str = "<table border ='1'>";
+	str += "<tr><th>코드</th><th>상품명</th><th>수량</th><th>단가</th></tr>";
+	
+	for(let i = 0; i < sangpumNode.length; i++){
+		str += "<tr>";
+		str += "<td>" + codeNode[i].firstChild.nodeValue + "</td>";
+		str += "<td>" + sangirumNode[i].firstChild.nodeValue + "</td>";
+		str += "<td>" + suNode[i].firstChild.nodeValue + "</td>";
+		str += "<td>" + dangaNode[i].firstChild.nodeValue + "</td>";
+		str += "</tr>";
+	}
+	
+	str += "</table>";
+	document.getElementById("disp").innerHTML = str;
+
+}
+
+
+</script>
+</head>
+<body>
+<h2>MariaDB 자료 XML로 읽기</h2>
+<button id = "btnOk">XML로 읽기</button>
+<hr>
+<div id = "disp"></div>
+</body>
+</html>

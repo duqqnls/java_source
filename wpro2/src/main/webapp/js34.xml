@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mylist>
+	<item>
+		<code price="7000">10</code>
+		<sang>아이스아메리카노</sang>
+	</item>
+	<item>
+		<code price="8000">20</code>
+		<sang>콜드브루</sang>
+	</item>
+	<item>
+		<code price="7500">30</code>
+		<sang>카페라떼</sang>
+	</item>
+</mylist>
+<!-- 
+서버로부터 xml파일을 받을 수 있다.
+AJAX 할때 주로 사용. *독립적*으로 화면에 띄울 수 있다.
+-->
