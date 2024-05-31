@@ -37,7 +37,7 @@ public class ServletEx5Post extends HttpServlet {
 			out.println("<br>종목 하나 이상을 선택하면 어떨지..");
 			return;
 		}
-		
+		 
 		// radio
 		String language = request.getParameter("lang");
 		out.println("<br>자신있는 언어는 " + language);

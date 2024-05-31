@@ -30,7 +30,7 @@ public class ServletEx4Get extends HttpServlet {
 		out.println("</html></body>");
 		out.close();
 	}
-
+  
 	private String calcAge(String age) {
 		int imsi = Integer.parseInt(age) / 10 * 10;
 		String result = "기타";
