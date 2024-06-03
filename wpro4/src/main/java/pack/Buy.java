@@ -30,7 +30,7 @@ public class Buy extends HttpServlet {
 		out.println("<p><table width='80%'>");
 		out.println("<tr><th>상품명</th><th>가격</th></tr>");
 		int total = 0;
-		
+		 
 		for(int i = 0; i < glist.size(); i++) {
 			Goods goods = (Goods)glist.get(i);
 			out.println("<tr><th>" + goods.getName() + "</td>");

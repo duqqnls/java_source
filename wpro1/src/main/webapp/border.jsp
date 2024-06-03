@@ -7,7 +7,7 @@ String jemok = request.getParameter("subject");
 String nai = request.getParameter("age");
 String email = request.getParameter("email");
 String content = request.getParameter("content");
-
+ 
 System.out.println(irum + " " + jemok + " " + nai + " " + email + " " + content);
 %>
 <!DOCTYPE html>

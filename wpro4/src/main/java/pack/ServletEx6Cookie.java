@@ -40,7 +40,7 @@ public class ServletEx6Cookie extends HttpServlet {
 					// 쿠키값 디코딩(암호 해제)
 					pwd = URLDecoder.decode(cookies[i].getValue(), "utf-8");
 				}
-			} 
+			}  
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

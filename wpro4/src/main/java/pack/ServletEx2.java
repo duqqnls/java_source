@@ -33,7 +33,7 @@ public class ServletEx2 extends HttpServlet {
         // 현재 클래스의 메소드 호출
         int tot = calcData(a, b);
         out.println("<br>두 수의 합은 " + tot);
-        
+         
         // 클래스 호출
         String ir = other.getIrum();
         out.println("<br>이름은 " + ir);

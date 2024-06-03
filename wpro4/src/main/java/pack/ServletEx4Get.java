@@ -34,7 +34,7 @@ public class ServletEx4Get extends HttpServlet {
 	private String calcAge(String age) {
 		int imsi = Integer.parseInt(age) / 10 * 10;
 		String result = "기타";
-		
+		 
 		switch (imsi) {
 		case 20: 
 			result = "이십대"; break;

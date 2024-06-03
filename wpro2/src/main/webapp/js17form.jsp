@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-// 자바 영역
+// 자바 영역 
 request.setCharacterEncoding("utf-8");
 
 String irum = request.getParameter("name");

@@ -8,7 +8,7 @@
     pageEncoding="UTF-8"%>
   
    
-{"sangpum":[
+{"sangpum":[ 
 <%
 /* 
 JSP 파일에서 DB 자료를 읽어와서 JSON 파일 형태로 변환하는 방법 (.jsp 파일 초기 세팅)

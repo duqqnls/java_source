@@ -32,7 +32,7 @@ public class ServletEx3 extends HttpServlet {
 		// doGet(request, response);
 	}
 	*/
-	
+	 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// get 요청 시 매 번 수행
 		num += 1;

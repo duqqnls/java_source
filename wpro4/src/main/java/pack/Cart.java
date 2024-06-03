@@ -28,7 +28,7 @@ public class Cart extends HttpServlet {
 		if(glist == null) glist = new ArrayList<Goods>(); // Goods 객체를 담을 glist 생성
 		glist.add(new Goods(name, price));
 		session.setAttribute("list", glist);
-		
+		 
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
 		out.println("<html><body>☞" + name + "구입했습니다.");

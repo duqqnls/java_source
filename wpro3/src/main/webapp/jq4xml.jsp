@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?> <!-- js34.xml 맨 첫줄에 선언된 문장 복붙 -->
-<!-- XML파일 내보내기 -->
+<!-- XML파일 내보내기 --> 
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.PreparedStatement"%>

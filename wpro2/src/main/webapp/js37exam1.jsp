@@ -7,7 +7,7 @@
     pageEncoding="UTF-8"%>
 {"jikwon":
 [
-<%
+<% 
 	
 	Connection conn = null;
 	PreparedStatement pstmt = null;
