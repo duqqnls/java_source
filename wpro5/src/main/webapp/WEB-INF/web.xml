@@ -36,4 +36,10 @@
 	<location>/errfilenot.jsp</location>
   </error-page>
   -->
+  
+  <servlet>
+	  <servlet-name>InitServlet</servlet-name>
+	  <servlet-class>pack.InitServlet</servlet-class>
+	  <load-on-startup>1</load-on-startup> <!-- 다른 서블릿보다 InitServlet을 우선으로 생성  -->
+</servlet>
 </web-app>
