@@ -44,7 +44,9 @@ public class ConnClass {
 				if(rs != null) rs.close();
 				if(pstmt != null) pstmt.close();
 				if(conn != null) conn.close();
-			} catch (Exception e2) { }
+			} catch (Exception e2) {
+				
+			}
 		}
 		return list;
 	}
