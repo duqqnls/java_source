@@ -53,7 +53,7 @@ public void LineDraw(Graphics g) {
 			g.setColor(Color.PINK);
 
 	int nStartX = (int) (POINTMIDDLEY + (Math.cos(Math.PI * (dAngle / 180.0)) * 110));
-	int nStartY = (int) (POINTMIDDLEY + (Math.sin(Math.PI * (dAngle / 180.0)) * 110));
+	int nStartY = (int) (POINTMIDDLEY + (Math.sin(Math.PI * (dAngle / 180.0)) * 110)); 
 	int nEndX = (int) (POINTMIDDLEY + (Math.cos(Math.PI * (dAngle / 180.0)) * 120));
 	int nEndY = (int) (POINTMIDDLEY + (Math.sin(Math.PI * (dAngle / 180.0)) * 120));
 
