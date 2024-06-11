@@ -1,5 +1,8 @@
 package pack3;
 
+import java.awt.Frame;
+import java.awt.event.WindowAdapter;
+
 // 내부 클래스
 // 클래스의 멤버로 필드, 메소드, 클래스를 사용할 수 있다.
 // 추가적으로 특정 클래스 내에서 클래스를 선언해서 사용할 수 있는데 이를 내부 클래스라고 한다.
