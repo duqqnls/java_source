@@ -8,7 +8,7 @@
 <%
 bean.setBip(request.getRemoteAddr());
 bean.setBdate();
-int newNum = boardMgr.currentMaxNum() + 1;
+int newNum = boardMgr.currentMaxNum() + 1; 
 bean.setNum(newNum);
 bean.setGnum(newNum);
 
