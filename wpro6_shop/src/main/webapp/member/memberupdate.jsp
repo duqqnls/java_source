@@ -75,7 +75,7 @@ window.onload = function(){
   </tr>
   <tr>
   	<td>주소</td>
-  	<td>
+  	<td> 
   		<input type="text" name="address" 
   			value="<%=bean.getAddress()%>" size="50">
   	</td>

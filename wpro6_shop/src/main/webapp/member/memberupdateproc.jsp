@@ -8,9 +8,9 @@
 <jsp:useBean id="memberMgr" class="pack.member.MemberMgr" />
 
 <%
-String id = (String)session.getAttribute("idKey");
+String id = (String)session.getAttribute("idkey");
 boolean b = memberMgr.memberUpdate(memberBean, id); 
-
+ 
 if(b){
 %>
 	<script>

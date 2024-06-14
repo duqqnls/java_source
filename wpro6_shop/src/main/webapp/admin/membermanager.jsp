@@ -20,12 +20,12 @@
 </div> 
 
 <table style="width: 90%">
-  <tr style="background-color: cyan">
+  <tr style="background-color: orange">
   	<th>아이디</th><th>회원명</th><th>이메일</th><th>전화</th><th>수정</th>
   </tr>
   <%
   ArrayList<MemberBean> list = memberMgr.getMemberAll(); 
-  for(MemberBean m:list){
+  for(MemberBean m:list){ 
   %>
   <tr style="text-align: center;">
   	<td><%=m.getId() %></td>

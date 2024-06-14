@@ -9,7 +9,7 @@ request.setCharacterEncoding("utf-8");
 String id = request.getParameter("id");
 //out.print(id);
 
-MemberBean bean = memberMgr.getMember(id);
+MemberBean bean = memberMgr.getMember(id); 
 %>
 <!DOCTYPE html>
 <html>
@@ -43,8 +43,7 @@ window.onload = function(){
   <tr>
   	<td>비밀번호</td>
   	<td>
-  		<input type="password" name="passwd" 
-  			value="<%=bean.getPasswd()%>">
+  		<input type="password" name="passwd" value="<%=bean.getPasswd()%>">
   	</td>
   </tr>
   <tr>

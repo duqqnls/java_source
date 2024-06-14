@@ -18,7 +18,7 @@
 boolean b = memberMgr.memberUpdate(bean, bean.getId());
 
 if(b){
-%>
+%> 
 	<script type="text/javascript">
 	alert("수정 성공");
 	location.href = "membermanager.jsp";
