@@ -14,9 +14,9 @@ boolean result = false;
 if(flag.equals("insert")){
 	result = ProductMgr.insertProduct(request);
 }else if(flag.equals("update")){
-	//result = ProductMgr.updateProduct(request);
+	result = ProductMgr.updateProduct(request); 
 }else if(flag.equals("delete")){ 
-	//result = ProductMgr.deleteProduct(request);
+	result = ProductMgr.deleteProduct(request.getParameter("no")); 
 }else{
 	response.sendRedirect("productmanager.jsp");
 }
