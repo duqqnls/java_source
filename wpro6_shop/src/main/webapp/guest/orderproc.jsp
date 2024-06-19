@@ -1,3 +1,4 @@
+<%@page import="java.util.Map"%>
 <%@page import="pack.order.OrderBean"%>
 <%@page import="java.util.Hashtable"%>
 <%@page import="java.util.Enumeration"%>
@@ -8,9 +9,10 @@
 <jsp:useBean id="productMgr" class="pack.product.ProductMgr" />
 
 <%
-Hashtable hCart = cartMgr.getCartList();
 
-Enumeration enu = hCart.keys();
+//Hashtable hCart = cartMgr.getCartList();
+//Enumeration enu = hCart.keys();
+Hashtable<String, OrderBean> hCart = (Hashtable<String, OrderBean>)cartMgr.getCartList();
 
 if(hCart.isEmpty()) {
 %>
@@ -21,10 +23,18 @@ if(hCart.isEmpty()) {
 	</script>
 <%
 }else{
+	/*
 	while(enu.hasMoreElements()){
 		OrderBean orderBean = (OrderBean)hCart.get(enu.nextElement());
 		orderMgr.insertOrder(orderBean); 	 // 주문 정보 DB에 저장 
 		productMgr.reduceProduct(orderBean); // 주문 수량 만큼 현 재고량 빼기 작업
+		cartMgr.deleteCart(orderBean);
+	} 
+	*/
+	for(Map.Entry<String, OrderBean> entry:hCart.entrySet()){
+		OrderBean orderBean = entry.getValue();
+		orderMgr.insertOrder(orderBean);
+		productMgr.reduceProduct(orderBean);
 		cartMgr.deleteCart(orderBean);
 	}
 %>

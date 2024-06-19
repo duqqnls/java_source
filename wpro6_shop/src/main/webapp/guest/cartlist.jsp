@@ -1,3 +1,4 @@
+<%@page import="java.util.Map"%>
 <%@page import="pack.product.ProductDto"%>
 <%@page import="pack.product.ProductMgr"%>
 <%@page import="pack.order.OrderBean"%>
@@ -19,12 +20,13 @@
 <h2>* 장밤구니 목록 *</h2>
 <%@ include file = "guest_top.jsp" %>
 <table>
-	<tr style="background-color: orange">
+	<tr style="background-color: white; color:pink">
 		<th>주문상품</th><th>가격(소계)</th><th>수량</th><th>수정/삭제</th><th>조회</th>
 	</tr>
 <%
 int totalPrice = 0;
-Hashtable hCart = cartMgr.getCartList();
+//Hashtable hCart = cartMgr.getCartList();
+Hashtable<String, OrderBean> hCart = (Hashtable<String, OrderBean>)cartMgr.getCartList();
 
 if(hCart.size() == 0) {
 %>
@@ -33,6 +35,7 @@ if(hCart.size() == 0) {
 	</tr>
 <%
 }else {
+	/*
 	Enumeration enu = hCart.keys(); // Map 타입의 컬렉션 읽어 반복처리
 	while(enu.hasMoreElements()){
 		OrderBean orderbean = (OrderBean)hCart.get(enu.nextElement());
@@ -41,6 +44,15 @@ if(hCart.size() == 0) {
 		int quantity = Integer.parseInt(orderbean.getQuantity());
 		int subTotal = price * quantity; // 소계
 		totalPrice += subTotal; // 총계 
+	*/
+	for(Map.Entry<String, OrderBean> entry : hCart.entrySet()){
+		OrderBean orderBean = entry.getValue();
+		ProductDto product = productMgr.getProduct(orderBean.getProduct_no());
+		int price = Integer.parseInt(product.getPrice());
+		int quantity = Integer.parseInt(orderBean.getQuantity());
+		int subTotal = price * quantity; // 소계
+		totalPrice += subTotal; // 총계 
+
 %>
 <form action = "cartproc.jsp" method="get">
 	<input type="hidden" name="flag">
