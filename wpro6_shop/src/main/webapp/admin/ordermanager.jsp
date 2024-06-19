@@ -16,7 +16,7 @@
 </head>
 <body>
 <h2>* 주문된 상품 목록 *</h2>
-<%@ include file = "admin_top.jsp" %>
+<%@ include file = "admin_top.jsp" %> 
 <table>
 	<tr style="background-color: pink">
 		<th>주문번호</th><th>주문자</th><th>주문 ID</th><th>상품명</th><th>주문수량</th><th>주문일</th><th>주문상태</th><th>보기</th>

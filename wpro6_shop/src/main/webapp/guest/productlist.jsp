@@ -40,7 +40,7 @@
 </table>
 
 <%@ include file = "guest_bottom.jsp" %>
-
+ 
 <form action="productdetail_g.jsp" name="detailFrm" method="post">
 	<input type="hidden" name="no" />
 </form>

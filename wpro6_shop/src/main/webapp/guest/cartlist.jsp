@@ -28,7 +28,7 @@ int totalPrice = 0;
 //Hashtable hCart = cartMgr.getCartList();
 Hashtable<String, OrderBean> hCart = (Hashtable<String, OrderBean>)cartMgr.getCartList();
 
-if(hCart.size() == 0) {
+if(hCart.size() == 0) { 
 %>
 	<tr>
 		<td colspan ="5">주문 건수가 없어요</td>

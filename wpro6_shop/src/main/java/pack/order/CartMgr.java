@@ -19,7 +19,7 @@ public class CartMgr {
 			}else {
 				hCart.put(product_no, obean); // Cart에 담기는 최초 상품 (상품의 종류는 다름)
 			}
-		}
+		} 
 	}
 	
 	public Hashtable<String, OrderBean> getCartList(){

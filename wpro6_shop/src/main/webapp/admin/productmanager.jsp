@@ -24,7 +24,7 @@
 		%>
 		<tr>
 			<td colspan = "6">등록된 상품이 없습니다.
-		</tr>
+		</tr> 
 		<%
 		}else{
 			for(ProductDto p:plist){

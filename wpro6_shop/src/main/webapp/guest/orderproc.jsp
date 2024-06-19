@@ -41,7 +41,7 @@ if(hCart.isEmpty()) {
 	<script>
 	alert("주문 처리가 잘 되었습니다.\n 고객님 감사합니다.");
 	location.href="orderlist.jsp";
-	</script>
+	</script> 
 <% 
 }
 %>

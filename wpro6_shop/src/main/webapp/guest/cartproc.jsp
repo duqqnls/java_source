@@ -33,7 +33,7 @@ if(id == null) {
 	<script>
 		alert("장바구니의 내용을 수정했습니다.");
 		location.href="cartlist.jsp"; // cart에 등록된 주문 상품 목록 보여주기
-	</script>
+	</script> 
 <%
 	}else if(orderFlag.equals("del")) {
 		cartMgr.deleteCart(order);

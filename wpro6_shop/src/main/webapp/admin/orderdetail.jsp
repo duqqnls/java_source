@@ -27,7 +27,7 @@ ProductDto product = productMgr.getProduct(order.getProduct_no());
 <table border="1">
 	<tr>
 		<td>고객 아이디 : <%=order.getId() %></td>
-		<td>주문 번호 : <%=order.getNo() %></td>
+		<td>주문 번호 : <%=order.getNo() %></td> 
 		<td>상품 번호 : <%=product.getNo() %></td>
 		<td>상 품 명 : <%=product.getName() %></td>
 	</tr>

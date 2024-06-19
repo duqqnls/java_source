@@ -34,7 +34,7 @@ public class ProductMgr {
 	public ArrayList<ProductDto> getProductAll() {
 		ArrayList<ProductDto> list = new ArrayList<ProductDto>();
 		
-		try {
+		try { 
 			conn = ds.getConnection();
 			String sql = "select * from shop_product order by no desc";
 			pstmt = conn.prepareStatement(sql);

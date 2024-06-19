@@ -33,7 +33,7 @@ ProductDto dto = productMgr.getProduct(no);
 				<tr>
 					<td>번호 : </td><td><%=dto.getNo() %></td>
 				</tr>
-				<tr>
+				<tr> 
 					<td>상품명 : </td><td><%=dto.getName() %></td>
 				</tr>
 				<tr>

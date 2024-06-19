@@ -43,7 +43,7 @@ ProductDto dto = productMgr.getProduct(no);
 			</table>
 		</td>
 		<td style="vertical-align : top;">
-			<h3>* 상품 설명 *</h3>
+			<h3>* 상품 설명 *</h3> 
 			<%=dto.getDetail() %>
 		</td>
 	</tr>

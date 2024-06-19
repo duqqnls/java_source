@@ -112,7 +112,7 @@ public class OrderMgr {
 			} catch (Exception e2) {
 				// TODO: handle exception
 			}
-		}
+		} 
 		return list;
 	}
 	

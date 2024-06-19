@@ -36,7 +36,7 @@ if(list.isEmpty()) {
 	for(OrderBean ord:list){
 		ProductDto product = productMgr.getProduct(ord.getProduct_no());
 %>
-	<tr>
+	<tr> 
 		<td><%=ord.getNo() %></td>
 		<td><%=product.getName() %></td>
 		<td><%=ord.getQuantity() %></td>
