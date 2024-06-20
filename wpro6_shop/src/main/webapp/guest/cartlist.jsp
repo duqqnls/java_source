@@ -17,7 +17,7 @@
 <script type="text/javascript" src="../js/script.js"> </script>
 </head>
 <body>
-<h2>* 장밤구니 목록 *</h2>
+<h2>* 장바구니 목록 *</h2>
 <%@ include file = "guest_top.jsp" %>
 <table>
 	<tr style="background-color: white; color:pink">

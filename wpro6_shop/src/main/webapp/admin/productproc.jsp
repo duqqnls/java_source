@@ -26,7 +26,7 @@ if(result){
 	<script>
 		alert("정상 처리되었습니다.");
 		location.href="productmanager.jsp";
-	</script>
+	</script> 
 <% }else{ %>
 	<script>
 		alert("오류 발생되었습니다.");
