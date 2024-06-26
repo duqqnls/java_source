@@ -160,7 +160,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="wpro6_shop" path="/wpro6_shop" reloadable="true" source="org.eclipse.jst.jee.server:wpro6_shop"/><Context docBase="wpro4" path="/wpro4" reloadable="true" source="org.eclipse.jst.jee.server:wpro4"/><Context docBase="wpro2" path="/wpro2" reloadable="true" source="org.eclipse.jst.jee.server:wpro2"/><Context docBase="wpro7el" path="/wpro7el" reloadable="true" source="org.eclipse.jst.jee.server:wpro7el"/></Host>
+      <Context docBase="wpro6_shop" path="/wpro6_shop" reloadable="true" source="org.eclipse.jst.jee.server:wpro6_shop"/><Context docBase="wpro4" path="/wpro4" reloadable="true" source="org.eclipse.jst.jee.server:wpro4"/><Context docBase="wpro2" path="/wpro2" reloadable="true" source="org.eclipse.jst.jee.server:wpro2"/><Context docBase="wpro7el" path="/wpro7el" reloadable="true" source="org.eclipse.jst.jee.server:wpro7el"/><Context docBase="wpro9mybatis" path="/wpro9mybatis" reloadable="true" source="org.eclipse.jst.jee.server:wpro9mybatis"/><Context docBase="wpro10member" path="/wpro10member" reloadable="true" source="org.eclipse.jst.jee.server:wpro10member"/></Host>
     </Engine>
   </Service>
 </Server>
