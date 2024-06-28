@@ -1,6 +1,6 @@
 package pack.business;
 
-import java.sql.SQLException; 
+import java.sql.SQLException;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
