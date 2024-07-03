@@ -1,25 +1,26 @@
 package kr.mvc.controller;
 
-import java.util.ArrayList;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import kr.mvc.model.UserDto;
 import kr.mvc.model.UserManager;
 
-public class ListController implements Controller{
-	
+public class UpdateFormController implements Controller {
+
 	@Override
 	public ModelAndView execute(HttpServletRequest req, 
 			HttpServletResponse resp) throws Exception {
-		ArrayList<UserDto> list = UserManager.instance().getUserAll();
-		req.setAttribute("list", list);
+		// 수정 화면 띄우기
+		req.setCharacterEncoding("utf-8");
+		String userid = req.getParameter("userid");
+		
+		UserDto dto = UserManager.instance().findUser(userid);
+		req.setAttribute("user", dto);
 		
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("list.jsp");
-		modelAndView.setRedirect(false); // forwarding
+		modelAndView.setViewName("update.jsp");
+		modelAndView.setRedirect(false);
 		return modelAndView;
 	}
-
 }

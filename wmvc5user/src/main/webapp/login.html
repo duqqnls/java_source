@@ -2,48 +2,47 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>wmvc5user</title>
 <script type="text/javascript">
-window.onload = function() {
+window.onload = () => {
 	let btnLogin = document.querySelector("#btnLogin");
 	btnLogin.addEventListener("click", loginFunc, false);
 	
-	document.querySelector("#btnInsert").addEventListener("click", insertFunc, false);
+	document.querySelector("#btnSignUp").
+		addEventListener("click", SingupFunc, false);
 }
 
-function loginFunc() {
+function loginFunc(){
 	//alert("a");
-	if(frm.userid.value === "") {
-		alert("아이디 입력 !");
-		frm.userid.focus();
+	if(form.userid.value === ""){
+		alert("아이디 입력");
+		form.userid.focus();
+		return false;
+	}
+	if(form.password.value === ""){
+		alert("비밀번호 입력");
+		form.password.focus();
 		return false;
 	}
 	
-	if(frm.password.value === "") {
-		alert("비밀번호 입력 !");
-		frm.password.focus();
-		return false;
-	}
-	
-	frm.action="login.m2";
-	frm.submit();
+	form.action="login.m2";
+	form.submit();
 }
 
-function insertFunc() {
-	// alert("b");
-	frm.action="insert.jsp";
-	frm.submit();
+function SingupFunc(){
+	//alert("b");
+	form.action="insert.html";
+	form.submit();
 }
 </script>
 </head>
 <body>
-<h3>* 사용자 관리 로그인(MVC) *</h3>
-<form name="frm" method="post">
+<h3>* 사용자 관리 로그인(MVC 패턴) *</h3>
+<form name="form" method="post">
 아 이 디 : <input type="text" name="userid"><br>
 비밀번호 : <input type="text" name="password"><br>
 <input type="button" value="로 그 인" id="btnLogin">
-<input type="button" value="회원가입" id="btnInsert">
-
+<input type="button" value="회원가입" id="btnSignUp">
 </form>
 </body>
 </html>
