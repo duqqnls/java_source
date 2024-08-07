@@ -8,6 +8,8 @@
 <%
 // cors 문제 해결
 response.setHeader("Access-Control-Allow-Origin", "*");
+
+String jikname=request.getParameter("jikname");
 %>
 
 {"jikwon":
@@ -22,7 +24,8 @@ try {
    Class.forName("org.mariadb.jdbc.Driver");
    String url = "jdbc:mariadb://localhost:3306/test";
    conn = DriverManager.getConnection(url, "root", "123");
-   pstmt = conn.prepareStatement("SELECT jikwon_no, jikwon_name, buser_name, jikwon_jik FROM jikwon INNER JOIN buser ON jikwon.buser_num = buser.buser_no");
+   pstmt = conn.prepareStatement("SELECT jikwon_no, jikwon_name, buser_name, jikwon_jik, jikwon_pay FROM jikwon INNER JOIN buser ON jikwon.buser_num = buser.buser_no where jikwon_jik=?");
+   pstmt.setString(1, jikname);
    rs = pstmt.executeQuery();
    
    String result = "";
@@ -35,7 +38,8 @@ try {
       result += "\"no\":\"" + rs.getString("jikwon_no") + "\",";
       result += "\"name\":\"" + rs.getString("jikwon_name") + "\",";
       result += "\"bname\":\"" + rs.getString("buser_name") + "\",";
-      result += "\"jik\":\"" + rs.getString("jikwon_jik") + "\"";
+      result += "\"jik\":\"" + rs.getString("jikwon_jik") + "\",";
+      result += "\"pay\":\"" + rs.getString("jikwon_pay") + "\"";
       result += "}";
    }
 
